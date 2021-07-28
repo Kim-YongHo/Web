@@ -3,7 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>inlineBlock 예제</title>
-	<style type="text/css"> 
+	<style type="text/css">
+	/* display 속성이 없으면 block이 디폴트/행으로 배치/여백이 있음
+    .greenBox{
+        width:150px;
+        height:750;
+        margin:20px;
+        border:solid 3px #73AD21;
+    }
+    */
+
+    /* 인라인이라서 여백없이 박스가 적용*/
+    /*.greenBox{
+        display:inline;
+        width:150px;
+        height:750;
+        margin:20px;
+        border:solid 3px #73AD21;
+    }
+    */
+
+    /* inlin-block 이라서 박스 안에 여백이 존재*/
+    .greenBox{
+        display:inline-block; /* 인라인이라서 여백없이 박스가 적용*/
+        float:left;
+        width:150px;
+        height:750;
+        margin:10px;
+        border:solid 3px #73AD21;
+    }
 
 	</style>
 </head>
@@ -12,10 +40,10 @@
 </body>
 	<h2>display 속성 (block / inline / inline-block)</h2>
 
-    <div class="">박스 1</div>
-    <div class="">박스 2</div>
-    <div class="">박스 3</div>
-    <div class="">박스 4</div>  
+    <div class="greenBox">박스 1</div>
+    <div class="greenBox">박스 2</div>
+    <div class="greenBox">박스 3</div>
+    <div class="greenBox">박스 4</div>
 </html>
 
 
