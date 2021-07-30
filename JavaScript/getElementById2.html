@@ -3,7 +3,22 @@
 	<head>
 		<meta charset="UTF-8">
         <title>getElementById() 예제2</title>
-        <script type="text/javascript">	
+        <script type="text/javascript">
+            // 1. 필요한 객체 요소 반환(원도우 load 시)
+            window.onload = function(){
+                imageA = document.getElementById("imageA"); // imapgeA를 가리키는 포인트 생성
+                hint = document.getElementById("hint");
+                cButton = document.getElementById("changeButton");
+            }
+
+
+            // 2. 변경 버튼을 클릭하면 반환받은 요소들의 내용을 변경
+            function change(){
+                imageA.src = "image/B.png";
+                hint.innerHTML = "새로운 이미지로 변경되엇습니다,";
+                hint.style.background = "red";
+                cButton.innerHTML = "완료";
+            }
 
 		</script>
 	</head>	

@@ -7,16 +7,47 @@
 			td { width:50px; height:30px; text-align:center; }
 		</style>
         <script type="text/javascript">
-	        window.onload = function() {
+	        window.onLoad = function() {
 				//tdArr (모든 td 요소를 배열로 받아옴)
 				var tdArr = ;
 				
-				var setNumberBtn = ;
+				var setNumberBtn = document.getElementById("setNumberBtn");
 				var setColorBtn = document.getElementById("setColorBtn");
 				var clearNumberBtn = document.getElementById("clearNumberBtn");
 				var clearColorBtn = document.getElementById("clearColorBtn");
 				
 			/* 함수작성 */
+			// 셀에 번호 채우기 버튼을 클릭하면 동작하는 함수
+			setNumberBtn.onclick = function(){
+				for(var i = 0; i<tdArr.length;i++){
+					tdArr[i].innerHTML = i;
+				}
+			} // 셀에 번호 채우기 버튼 클릭 이벤트 핸들러 함수
+
+			// 셀에 색상 채우기 버튼을 클릭
+			setColorBtn.onclick = function(){
+				var colors = ["red", "orange", "yellow", "green", "blue", "navy","violet"]; // 색상배열
+				for (var i=0; i<tdArr.length; i++{
+					tdArr[i].style.background=colors[i];
+				}
+			}
+
+			// 셀에 색상 지우기 버튼 클릭시 동작
+			clearNumberBtn.onclick = function(){
+				for(var i = 0; i<tdArr.length;i++){
+					tdArr[i].innerHTML = "";
+				}
+			}
+
+			clearColorBtn.onclick = function(){
+				var colors = ["red", "orange", "yellow", "green", "blue", "navy","violet"]; // 색상배열
+				for (var i=0; i<tdArr.length; i++{
+					tdArr[i].style.background="";
+				}
+			}
+
+
+		} //onload 이벤트 함수 : 문서내 모든 요소가 load 된 후에 실행
 
 		</script>
     </head>
