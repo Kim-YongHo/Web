@@ -3,7 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <title>테이블에서 짝수 행 선택 </title>
-	<style type="text/css">		
+	<style type="text/css">
+        #stdTable {
+            margin:0 auto;
+            border-collapse:collapse; /* 단일 경계선 */
+        }
+
+        #stdTable th {
+            color:white;
+            background-color:blue;
+        }
+
+        #stdTable th.name {width:100px;} /* 자식 클래스 중에 th.name에 접근 class */
+        #stdTable th.email {width:200px;}
+
+        /* .name {width:100px;} 동일 표현*/
+        /* .email {width:200px;} 동일 표현*/
+
+        #stdTable td{height:20px;}
+
+        /* 짝수행 선택(tr) */
+        #stdTable tr:nth-child(2n) td{
+            background-color:yellow;
+        }
 
     </style>
 </head>

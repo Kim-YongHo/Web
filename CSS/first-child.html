@@ -5,10 +5,35 @@
 <title>first-child 선택자</title>
 	<style type="text/css">
 
+		#content div{ /* content의 모든 자손 <div> 의미 한칸 띄면 후손 */
+			width:400px;
+			height:50px;
+			border:solid 1px black;
+		}
+
+		/* div:first-child 작성시 앞뒤로 띄어쓰기 금지 */
+		#content div:first-child { /* content의 첫번째 자손 <div> 의미 */
+			background:yellow;
+		}
+
+		#content div:first-child + div { /* content의 두번째 자손 <div> 의미 */
+			background:green;
+		}
+
+		/* #content div:first-child + div + div  content의 세번째 자손 <div> 의미 */
+
+		#content div:nth-child(3) { /* content의 세번째 자손 <div> 의미 */
+			background:gold;
+		}
+
+		#content div:nth-child(4) { /* content의 세번째 자손 <div> 의미 */
+			background:pink;
+		}
+
 	</style>
 </head>
 <body>
-	<div id="content">
+	<div id="content"> <!-- id content 밑에 존재하는 자손 div에 영향 -->
 		<div></div>
 		<div></div>
 		<div></div>

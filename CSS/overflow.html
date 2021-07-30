@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>overflow</title>
-	<style type="text/css">	
+	<style type="text/css">
+		div {
+			width:200px;
+			height:175px;
+			border:solid 1px black;
+			/*overflow 속성 설정 안하면 상위 여역 밖에 표시하게 됨*/
+			/*overflow:hidden;*/ /* 부모 태그 영역 밖의 후손 태그는 감춤 */
+			/*overflow:scroll;*/
+			overflow:auto;
+		}
 
 	</style>
 </head>
