@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>연습문제4</title>
+    <style>
+        h1 {
+                font-weight:bold;
+                text-align:center;
+        }
+
+        h3 {
+                 margin-left:50px;
+                 font-weight:bold;
+        }
+        label {
+                 margin-left:80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>프런트엔드 개발 지원서</h1>
+        HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾음!
+        <hr>
+
+    <h3>개인정보</h3>
+        <label>성명</label>
+        <input type="text" id="name" size="10">
+        <br>
+        <label>연락처</label>
+        <input type="text" id="phone" size="10">
+        <br><br><br>
+
+    <h3>지원 분야</h3>
+        <label><input type="radio" name="year" value="웹퍼블">웹 퍼블리싱 </label>
+        <br>
+        <label><input type="radio" name="year" value="웹 앱">웹 애플리케이션 개발 </label>
+        <br>
+        <label><input type="radio" name="year" value="개발">개발 환경 개선 </label>
+
+
+    <h3>지원 동기</h3>
+        자기 소개 <br> <!-- 여러 줄 입력이 가능한 테스트 창 <textarea rows=행수 cols=한행의 글자수> -->
+        <textarea rows="10" cols="50" name="content">자기소개 입력</textarea>
+        <br>
+        <input type="submit" value="제출"> &nbsp; <input type="reset" value="다시 쓰기">
+
+</body>
+</html>
