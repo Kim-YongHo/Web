@@ -10,15 +10,18 @@
 		<script src="jquery-3.5.1.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#off').on('mouseover', function(){		
+				$('#off').on('mouseover', function(){
+				    $('img').fadeTo(1000,0); // 투명해지면서 이미지가 사라짐 - 영역은 유지
 
 				}); 
 				
-				$('#on').on('mouseover', function(){	
+				$('#on').on('mouseover', function(){
+				     $('img').fadeTo(1000,1);
 
 				});
 		
 				$('#50').on('mouseover', function(){
+				    $('img').fadeTo(1000,0.5);
 
 				});		
 			});

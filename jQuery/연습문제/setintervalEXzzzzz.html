@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval() 연습문제</title>
+    <script>
+      var count = 0; // 누적 변수 초기화
+
+      function start() { // 추력 문구를 내보내고 확인 번트 누르면 showIMGag 호출하기 위해 setInter 함수호출
+        alert("이미지 10개 출력");
+        timerID = setInterval('showImg()', 1000);
+      }
+
+      function showImg() {
+        count ++; //  함수 호출 시 마다 1씩 증가
+
+        if(count % 2 == 1)
+          //이미지 추가 코드
+          //document.body.innerHTML += "<img src='../image/apple.png'>" //edge로 인해 주로 사용 x
+          document.write("<img src='../image/apple.png'>")
+
+        else
+          document.write("<img src='../image/bomb.png'>")
+
+        if(count == 10 {
+            clearInterval(timerID);
+
+        }
+
+      }
+    </script>
+</head>
+<body onload="start()">
+
+</body>
+</html>

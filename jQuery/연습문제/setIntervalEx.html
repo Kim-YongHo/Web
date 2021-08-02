@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>setInterval() 연습문제</title>
+		<script type="text/javascript">
+			var count = 0;
+			
+			function start() {
+				alert("이미지 10개 출력");
+				timerID = setInterval('showImg()', 1000);
+	           //인터발 설정 코드
+			}
+			
+			function showImg() {						
+				count++;
+								
+				if(count % 2 == 1)		
+					//이미지 추가 코드
+					//document.body.innerHTML += "<img src='../image/apple.png'>" //edge로 인해 주로 사용 x
+          			document.write("<img src='../image/apple.png'>")
+				else
+					//이미지 추가 코드
+					document.write("<img src='../image/bomb.png'>")
+
+				
+				if(count == 10) {
+					clearInterval(timerID);
+					// 인터발 삭제
+				}
+			}				
+		</script>		
+	<body onLoad = "start()">
+	</body>
+</html>
+
