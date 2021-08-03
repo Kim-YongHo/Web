@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* index.css */
+
+/*********************************/
+
+#headerBox {
+    height:60px;
+    line-height:60px; /* */
+    padding:0;
+}
+
+#logoBox{
+    float:left;
+    height:60px;
+    line-height:60px;
+}
